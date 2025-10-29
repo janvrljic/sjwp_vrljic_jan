@@ -8,6 +8,14 @@
   <meta name="author" content="jan vrljić">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jan Vrljić</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+    .drugi{
+      color: blue;
+    }
+
+    
+    </style>
 </head>
 <body>
   <h1>Zadaće:</h1>
@@ -19,6 +27,12 @@
    <li>Zadaća</li>
   </ol>
   
+  <h2>načini dodavanja CSS-a</h2>
+ <ul>
+   <li style="color:brown;">Inline CSS</li>
+   <li class="drugi">Internal CSS</li>
+   <li class="treci">Externall CSS</li>
+ </ul>
   
    <!--   naslovi, heading  -->
       <h1>naslov 1</h1>
@@ -63,7 +77,7 @@
  liste: ul -unordered(samo tocke nema brojeva), ol.ordered list(brojevi ispred 1.,2.,...),dl-definition list(lijevo naslov, ispod desno definicija)
  dt(naslov nekakav) dd(definicija)/ 
  <h3>voćni desert u čaši</h3>
- <h4>sastojci:</h4>
+ <h4 id="naslov">sastojci:</h4>
  <ul style="list-style-type:circle">
   <li>230 g kreme za kremšnite</li>
   <li>500 ml hladnog mlijeka</li>
@@ -138,7 +152,7 @@
 <img src="https://www.biovie.fr/img/cms/histoire-origine-mangue.png" alt="slika manga" width="600" height="300">
 <br>
 <hr>
-<p>slika s naseg PC-a</p>
+<p draggable="true">slika s naseg PC-a</p>
 <img src="./slike/mango.png" alt="slika manga" width="500">
 
 
