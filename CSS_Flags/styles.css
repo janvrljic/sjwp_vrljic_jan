@@ -1,0 +1,129 @@
+.plava{
+    width: 500px;
+    height: 350px;
+    background-color: blue;
+    position: relative;
+}
+.crv_h{
+    width: 40px;
+    height: 350px;
+    background-color: red;
+    position: absolute;
+    left: 130px;
+    z-index: 2;
+}
+.crv_v{
+    width:500px;
+    height: 40px;
+    background-color: red;
+    position: absolute;
+    top: 150px;
+    z-index: 2;
+
+}
+.bijela_h{
+    width: 80px;
+    height: 350px;
+    background-color: white;
+    position: absolute;
+    left: 110px;
+    z-index: 1;
+}
+.bijela_v{
+    width: 500px;
+    height: 75px;
+    background-color: white;
+    position: absolute;
+    top: 135px;
+    z-index: 1;
+}
+
+
+.svjetlo_plava{
+     width: 500px;
+    height: 350px;
+    background-color: #00A9CE;
+    position: relative;
+}
+
+.trokut{
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 175px solid black;
+    border-top: 175px solid transparent;
+    border-bottom: 175px solid transparent;
+ z-index: 2;
+}
+.zuta{
+    width: 500px;
+    height: 125px;
+    background-color:#FDDA25;
+    position: absolute;
+    top: 110px;
+}
+
+.crvena{
+    width: 500px;
+    height: 385px;
+    background-color: crimson;
+    position: relative;
+}
+.a1_trokut{
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 100px;
+    border-left: 100px solid white;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+
+}
+.a2_trokut{
+      width: 0;
+    height: 0;
+    position: absolute;
+    left: 100px;
+    border-left: 100px solid white;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    top: 78px;
+}
+.a3_trokut{
+     width: 0;
+    height: 0;
+    position: absolute;
+    left: 100px;
+    border-left: 100px solid white;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    top: 154px;
+
+}
+.a4_trokut{
+     width: 0;
+    height: 0;
+    position: absolute;
+    left: 100px;
+    border-left: 100px solid white;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    top: 232px;
+
+}
+.a5_trokut{
+     width: 0;
+    height: 0;
+    position: absolute;
+    left: 100px;
+    border-left: 100px solid white;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    top: 310px;
+}
+.bjela{
+    width: 100px;
+    height: 385px;
+    background-color: white;
+    position: relative;
+}
