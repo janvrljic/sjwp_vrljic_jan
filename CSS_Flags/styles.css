@@ -127,3 +127,102 @@
     background-color: white;
     position: relative;
 }
+
+
+
+.zastava{
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    position: relative;
+}
+.zel{
+    width: 100px;
+    height: 200px;
+    background-color: #007a5e;
+    position: absolute;
+}
+.c{
+    width: 100px;
+    height: 200px;
+    background-color: #CF1126;
+    position: absolute;
+    left: 100px;
+}
+.zu{
+    width: 100px;
+    height: 200px;
+    background-color: #fcd116;
+    position: absolute;
+    left: 200px;
+  
+}
+.z{
+          left: 128px;
+          top: 75px;
+          position: absolute;
+          z-index: 1;
+      
+            width: 50px;
+            height: 50px;
+            background: gold;
+            clip-path: polygon(
+                50% 0%,
+                61% 35%,
+                98% 35%,
+                68% 57%,
+                79% 91%,
+                50% 70%,
+                21% 91%,
+                32% 57%,
+                2% 35%,
+                39% 35%
+            );
+}
+.zastav{
+    width: 400px;
+    height: 300px;
+    position: relative;
+    background: crimson;
+}
+.k{
+    width: 195px;
+    height: 195px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    left: 100px;
+    top: 50px;
+}
+.kr{
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    background: crimson;
+    position: absolute;
+    left: 140px;
+    top: 65px;
+}
+.zvi{
+     left: 250px;
+          top: 100px;
+          position: absolute;
+          z-index: 1;
+      
+            width: 100px;
+            height: 100px;
+            background: white;
+            clip-path: polygon(
+                50% 0%,
+                61% 35%,
+                98% 35%,
+                68% 57%,
+                79% 91%,
+                50% 70%,
+                21% 91%,
+                32% 57%,
+                2% 35%,
+                39% 35%
+            );
+            transform: rotate(-20deg);
+}
