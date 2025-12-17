@@ -1,0 +1,63 @@
+ html{
+        background-image: linear-gradient(to bottom, #f5ebfa, #e7dbef, #a56abd, #6e3482);
+        height: 100%;
+    }
+
+    .prvi{
+        height: 200px;
+        width: 500px;
+       background-color: #f5ebfa;
+       margin-left: 620px;
+       top:  500px;
+        border-radius: 300px;
+        position: relative;
+        z-index: 4;
+       
+    }
+
+    .drugi{
+        height: 200px;
+        width: 500px;
+        background-color: #e7dbef;
+        margin-left: 620px;
+        margin-top: 400px;
+        border-radius: 100px;
+        position: relative;
+        z-index:4 ;
+        
+       
+    }
+    .treci{
+        height: 200px;
+        width: 500px;
+        background-color: #a56abd;
+        margin-left: 620px;
+       margin-top: -400px;
+        border-radius: 100px;
+        position: relative;
+        z-index: 2;
+    }
+    .cet{
+        height: 200px;
+        width: 500px;
+        background-color: #6e3482;
+        margin-left: 620px;
+        margin-top:-317px;
+        border-radius: 100px;
+        position: relative;
+        z-index: 1;
+    }
+    .peti{
+        height: 200px;
+        width: 500px;
+        background-color: #49225b;
+        margin-left: 620px;
+        margin-top: -300px;
+        border-radius: 100px;
+        position: relative;
+    }
+    p{
+        position: absolute;
+        margin-left: 50px;
+        margin-top:18px;
+    }
