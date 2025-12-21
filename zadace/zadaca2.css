@@ -4,6 +4,7 @@
     border: 7px solid black;
     background-color: lightgray;
     position: relative;
+  
 }
 .slika1 {
     width: 170px;
@@ -11,6 +12,7 @@
     position: absolute;
     top: 26px;
     left: 17px;
+    border-radius: 50%;
 }
 .ime{
  padding-left: 270px;
@@ -58,4 +60,73 @@
     font-size: 17px;
     font-family: serif;
     
+}
+
+
+.background{
+    border: 10px solid black;
+ width: 400px;
+  height: 300px;
+  position: relative;
+  background-color: #BFE33A;
+  z-index: 1;
+   overflow: hidden;
+}
+.krug1{
+   z-index: 0;
+    margin-top: 40px;
+    position:absolute ;
+    margin-left: -10px;
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+    background-color:  #5A9F48;
+}
+.krug2{
+    z-index: 0;
+    margin-top: 40px;
+    margin-left: 180px;
+    position:absolute ;
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+    background-color:  #5A9F48;
+}
+.krug3{
+    margin-top: 80px;
+margin-left: 30px;
+    position:absolute ;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #BFE33A;
+}
+.krug4{margin-top: 80px;
+ margin-left: 220px;
+    position:absolute ;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color:#BFE33A ;
+}
+.linija1{
+height: 300px;
+width: 30px;
+background-color: #BFE33A;
+position: absolute;
+margin-left:  88px;
+}
+.llinija2{
+height: 300px;
+width: 30px;
+background-color: #BFE33A;
+position: absolute;
+margin-left:  281px;
+}
+.linija3{
+height: 30px;
+width: 400px;
+background-color: #BFE33A;
+position: absolute;
+margin-top: 140px;
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Battle Shape</title>
+  <style>
+    body {
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #BFE33A;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .shape {
+      width: 300px;
+      height: 150px;
+      background:
+        radial-gradient(circle at 50px 75px, #5A9F48 50px, transparent 51px),
+        radial-gradient(circle at 150px 75px, #5A9F48 50px, transparent 51px),
+        radial-gradient(circle at 250px 75px, #5A9F48 50px, transparent 51px);
+    }
+  </style>
+</head>
+<body>
+  <div class="shape"></div>
+</body>
+</html>
