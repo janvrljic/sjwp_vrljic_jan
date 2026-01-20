@@ -1,0 +1,72 @@
+body{
+    background-color: grey;
+   
+   
+}
+.a{
+    background-color: white;
+    padding: 8px;
+}
+.prvi {
+  background-color: rgb(53, 122, 175);
+}
+
+.drugi {
+  background-color: rgb(54, 134, 185);        
+}
+
+.treci {
+  background-color: #3293c3;        
+}
+
+.cetvrti {
+  background-color: #469fcb;        
+}
+
+.peti {
+  background-color: #5fadd2;        
+}
+.sesti {
+  background-color: #75bada;        
+}
+
+.sedmi {
+  background-color: #8dc4df;        
+}
+
+.osmi {
+  background-color: #23ab7e;   
+  font-size: 20px; 
+  padding: 5px;
+  color: white;
+}
+
+.deveti {
+  background-color: #e7abc1;        
+}
+
+.deseti {
+  background-color: #e799b5;        
+}
+.jedanaesti {
+  background-color: #e587a7;
+}
+
+.dvanaesti {
+  background-color: #e2749a;    
+}
+
+.trinaesti {
+  background-color: #e0658a;      
+}
+
+.cetrnaesti {
+  background-color: #db5580;    
+}
+
+.petnaesti {
+  background-color: #da3d75;        
+}
+p{
+    margin: 0px;
+}
