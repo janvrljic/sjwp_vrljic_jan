@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+.prvi{
+    width: 200px;
+     height: 200px;
+     border: 1px solid black;
+     border-radius: 50%;
+     padding: 5px;
+     margin: 50px;
+     margin-left: 200px;
+     margin-top: 200px;
+    animation: 2s gumb  ease 0s infinite  alternate running;
+    background-color: blue;
+
+
+}
+
+@keyframes gumb {
+ 
+
+
+
+   100%{
+    
+     transform: scale(1.3);
+   }
+}
+
+.drugi{
+        width: 100px;
+     height: 100px;
+     border: 1px solid black;
+     padding: 5px;
+     margin: 50px;
+     margin-left: 100px;
+     margin-top: 100px;
+     text-align: center;
+    animation: 3s donkey  ease 0s infinite  alternate running;
+}
+@keyframes donkey {
+    100%{
+        opacity: 0.9%;
+    }
+    
+}
+    
+.treci{
+   width: 200px;
+     height: 200px;
+     border: 1px solid black;
+     padding: 5px;
+     margin: 50px;
+     margin-left: 200px;
+     margin-top: 200px;
+    animation: 1.8s luka ease 0s infinite  alternate running;
+    background-color: blue;
+
+}
+@keyframes luka {
+ 
+    
+
+ 100%{
+    transform: translateY(50px);
+ }
+
+}
+
+
+.cetvrti{
+    
+ width: 100px;
+     height: 100px;
+     border: 1px solid black;
+     padding: 5px;
+     margin: 50px;
+     margin-left: 100px;
+     margin-top: 100px;
+   transition: 0.5s donkey;
+
+}
+  div:hover{
+    animation-play-state: paused;
+  }
+  @keyframes donkey {
+  0%{
+        background-color: red;
+    }
+    33%{
+        background-color: blue;
+    }
+    
+    66%{
+        background-color: green;
+    }
+    100%{
+        background-color: red; 
+  }
+}
+
+     
+
+
+
+
+
+
+
+
+   </style>
+
+
+
+
+</head>
+<body>
+
+
+
+
+    <div class="prvi"></div>
+    <div class="drugi">ovo je tekst</div>
+    <div class="treci"></div>
+    <div class="cetvrti"></div>
+    <div class="peti"></div>
+    
+</body>
+</html>
