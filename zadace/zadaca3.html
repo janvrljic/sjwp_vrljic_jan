@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galerija</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: #1e293b;
+  padding: 15px 20px;
+}
+
+.menu a {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.container {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 10px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div><b>MovieApp</b></div>
+  <div class="menu">
+    <a onclick="loadContent('movies')">Filmovi</a>
+    <a onclick="loadContent('series')">Serije</a>
+    <a onclick="loadContent('docs')">Dokumentarci</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h2 id="title">Filmovi</h2>
+  <div class="grid" id="grid"></div>
+</div>
+
+<script>
+const data = {
+
+movies: [
+{title:"Inception", img:"https://image.tmdb.org/t/p/w500/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg", link:"tt1375666"},
+{title:"Interstellar", img:"https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg", link:"tt0816692"},
+{title:"The Dark Knight", img:"https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg", link:"tt0468569"},
+{title:"Fight Club", img:"https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg", link:"tt0137523"},
+{title:"Pulp Fiction", img:"https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg", link:"tt0110912"},
+{title:"Gladiator", img:"https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg", link:"tt0172495"},
+{title:"Joker", img:"https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg", link:"tt7286456"},
+{title:"Titanic", img:"https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg", link:"tt0120338"},
+{title:"Avatar", img:"https://image.tmdb.org/t/p/w500/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg", link:"tt0499549"},
+{title:"The Matrix", img:"https://image.tmdb.org/t/p/w500/aoi5v4e9tVnq8f8d2RZ5kFz7O3O.jpg", link:"tt0133093"},
+{title:"Se7en", img:"https://image.tmdb.org/t/p/w500/6yoghtyTpznpBik8EngEmJskVUO.jpg", link:"tt0114369"},
+{title:"Whiplash", img:"https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg", link:"tt2582802"},
+{title:"The Prestige", img:"https://image.tmdb.org/t/p/w500/5MXyQfz8xUP3dIFPTubhTsbFY6N.jpg", link:"tt0482571"},
+{title:"Django Unchained", img:"https://image.tmdb.org/t/p/w500/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg", link:"tt1853728"},
+{title:"The Lion King", img:"https://image.tmdb.org/t/p/w500/2bXbqYdUdNVa8VIWXVfclP2ICtT.jpg", link:"tt0110357"},
+{title:"Shrek", img:"https://image.tmdb.org/t/p/w500/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg", link:"tt0126029"},
+{title:"Avengers Endgame", img:"https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg", link:"tt4154796"},
+{title:"The Godfather", img:"https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg", link:"tt0068646"},
+{title:"Forrest Gump", img:"https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg", link:"tt0109830"},
+{title:"The Shawshank Redemption", img:"https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg", link:"tt0111161"}
+],
+
+series: [
+{title:"Breaking Bad", img:"https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg", link:"tt0903747"},
+{title:"Game of Thrones", img:"https://image.tmdb.org/t/p/w500/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg", link:"tt0944947"},
+{title:"Stranger Things", img:"https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg", link:"tt4574334"},
+{title:"The Witcher", img:"https://image.tmdb.org/t/p/w500/7vjaCdMw15FEbXyLQTVa04URsPm.jpg", link:"tt5180504"},
+{title:"Money Heist", img:"https://image.tmdb.org/t/p/w500/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg", link:"tt6468322"},
+{title:"The Office", img:"https://image.tmdb.org/t/p/w500/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg", link:"tt0386676"},
+{title:"Friends", img:"https://image.tmdb.org/t/p/w500/f496cm9enuEsZkSPzCwnTESEK5s.jpg", link:"tt0108778"},
+{title:"Dark", img:"https://image.tmdb.org/t/p/w500/5Lo5hW8QWz1iX8Qv7K7Dq0fC6F.jpg", link:"tt5753856"},
+{title:"Loki", img:"https://image.tmdb.org/t/p/w500/voHUmluYmKyleFkTu3lOXQG702u.jpg", link:"tt9140554"},
+{title:"The Boys", img:"https://image.tmdb.org/t/p/w500/stTEycfG9928HYGEISBFaG1ngjM.jpg", link:"tt1190634"},
+{title:"Wednesday", img:"https://image.tmdb.org/t/p/w500/9PFonBhy4cQy7Jz20NpMygczOkv.jpg", link:"tt13443470"},
+{title:"Peaky Blinders", img:"https://image.tmdb.org/t/p/w500/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg", link:"tt2442560"},
+{title:"Sherlock", img:"https://image.tmdb.org/t/p/w500/7WTsnHkbA0FaG6R9twfFde0I9hl.jpg", link:"tt1475582"},
+{title:"Narcos", img:"https://image.tmdb.org/t/p/w500/rTmal9fDbwh5F0waol2hq35U4ah.jpg", link:"tt2707408"},
+{title:"House of the Dragon", img:"https://image.tmdb.org/t/p/w500/z2yahl2uefxDCl0nogcRBstwruJ.jpg", link:"tt11198330"},
+{title:"Vikings", img:"https://image.tmdb.org/t/p/w500/bQLrHIRNEkE3PdIWQrZHynQZazu.jpg", link:"tt2306299"},
+{title:"Lost", img:"https://image.tmdb.org/t/p/w500/og6S0aTZU6YUJAbqxeKng9w6n7N.jpg", link:"tt0411008"},
+{title:"Dexter", img:"https://image.tmdb.org/t/p/w500/q8dWfc4JwQuv3HayIZeO84jAXED.jpg", link:"tt0773262"},
+{title:"Prison Break", img:"https://image.tmdb.org/t/p/w500/5E1BhkCgjLBlqx557Z5yzcN0i88.jpg", link:"tt0455275"},
+{title:"The Mandalorian", img:"https://image.tmdb.org/t/p/w500/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg", link:"tt8111088"}
+],
+
+docs: [
+{title:"Planet Earth", img:"https://image.tmdb.org/t/p/w500/7xFtr1hQ0kzVh8bXb1gZs1z6QfM.jpg", link:"tt0795176"},
+{title:"Planet Earth II", img:"https://image.tmdb.org/t/p/w500/2Xl9QHcQ9WkY7k8wF9pF3t9xZ7N.jpg", link:"tt5491994"},
+{title:"The Last Dance", img:"https://image.tmdb.org/t/p/w500/5Y9iZl0p8sHnGQ9gF6tY0hZ1y9.jpg", link:"tt8420184"},
+{title:"Free Solo", img:"https://image.tmdb.org/t/p/w500/v4QfYZMACODlWul9doN9RxE99ag.jpg", link:"tt7775622"},
+{title:"The Social Dilemma", img:"https://image.tmdb.org/t/p/w500/lQfdytwN7eh0tXWjIiMcefdxU2X.jpg", link:"tt11464826"},
+{title:"Inside Job", img:"https://image.tmdb.org/t/p/w500/4l2vV3sXyXh9H0Q6fQ6Q8Yp6Yp.jpg", link:"tt1645089"},
+{title:"Blackfish", img:"https://image.tmdb.org/t/p/w500/9zv0xJQ4s46HoPazTAp3GEXUXMa.jpg", link:"tt2545118"},
+{title:"Icarus", img:"https://image.tmdb.org/t/p/w500/dqK9Hag105HGpG5oHq9W1f9Q9p.jpg", link:"tt6333060"},
+{title:"Making a Murderer", img:"https://image.tmdb.org/t/p/w500/j10gV9b6Y5p1ZQ1sW2R1p8hFQZ.jpg", link:"tt5189670"},
+{title:"Our Planet", img:"https://image.tmdb.org/t/p/w500/ovDgO2LPfwdVRfvScAqo9aMiIW.jpg", link:"tt9253866"},
+{title:"Cosmos", img:"https://image.tmdb.org/t/p/w500/6HNRg1C1xE9YH6tZ4w4Q6VykBLL.jpg", link:"tt2395695"},
+{title:"March of the Penguins", img:"https://image.tmdb.org/t/p/w500/9tZ7bQ7xkG8Q1pV4w6P0Lh6TQ.jpg", link:"tt0428803"},
+{title:"An Inconvenient Truth", img:"https://image.tmdb.org/t/p/w500/gKHGbR2zR3Y5Wdl66iRS0LlwM651.jpg", link:"tt0497116"},
+{title:"Super Size Me", img:"https://image.tmdb.org/t/p/w500/6p6C3QJXh3c4W2KIiMzFxLpy0X.jpg", link:"tt0390521"},
+{title:"The Cove", img:"https://image.tmdb.org/t/p/w500/6xgYh7vP4xMIOKgHdwNwp0UrEG.jpg", link:"tt1313104"},
+{title:"13th", img:"https://image.tmdb.org/t/p/w500/4a7c6QpR8qz0d1E0nMZ7g6y.jpg", link:"tt5895028"},
+{title:"Amy", img:"https://image.tmdb.org/t/p/w500/f8F8Yp5L9FZ1R6bZ0d2k8nP.jpg", link:"tt2870648"},
+{title:"Senna", img:"https://image.tmdb.org/t/p/w500/7r9p3n6n7xMIOKgHdwNwp0UrEG.jpg", link:"tt1424432"},
+{title:"The Fog of War", img:"https://image.tmdb.org/t/p/w500/7s7f9X1wzZkP2Z0p8V6k8N.jpg", link:"tt0317910"},
+{title:"Citizenfour", img:"https://image.tmdb.org/t/p/w500/czRr4p3Qy0sL2sG7p7h8R0Y.jpg", link:"tt4044364"}
+]
+};
+
+function loadContent(type) {
+  const grid = document.getElementById("grid");
+  const title = document.getElementById("title");
+
+  grid.innerHTML = "";
+  title.innerText =
+    type === "movies" ? "Filmovi" :
+    type === "series" ? "Serije" : "Dokumentarci";
+
+  data[type].forEach(item => {
+    grid.innerHTML += `
+      <a href="https://www.imdb.com/title/${item.link}" target="_blank">
+        <div class="card">
+          <img src="${item.img}">
+          <p>${item.title}</p>
+        </div>
+      </a>
+    `;
+  });
+}
+
+loadContent('movies');
+</script>
+
+</body>
+</html>
