@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* 📱 MOBILE (default) */
+.container {
+  grid-template-areas:
+    "header"
+    "main"
+    "left"
+    "right"
+    "footer";
+}
+
+.header { grid-area: header; background: #ef6b6b; }
+.main   { grid-area: main;   background: #eaeaea; }
+.left   { grid-area: left;   background: #e6c85c; }
+.right  { grid-area: right;  background: #b7d96b; }
+.footer { grid-area: footer; background: #6aaed6; }
+
+.container > * {
+  padding: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* 📱 TABLET (≥768px) */
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header header"
+      "main   main"
+      "left   right"
+      "footer footer";
+  }
+}
+
+/* 💻 DESKTOP (≥1024px) */
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      "header header header"
+      "left   main   right"
+      "footer footer footer";
+  }
+}
+</style>
+<body>
+
+<div class="container">
+  <header class="header">Header</header>
+  <main class="main">Main</main>
+  <aside class="left">Left</aside>
+  <aside class="right">Right</aside>
+  <footer class="footer">Footer</footer>
+</div>
+
+</body>
+</html>

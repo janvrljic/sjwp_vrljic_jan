@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.head-box {
+  background: orange;
+  height: 60px;
+}
+
+
+.hero {
+  background: #ccff00;
+  height: 120px;
+}
+
+
+.content {
+  display: grid;
+  gap: 10px;
+}
+
+.box {
+  background: steelblue;
+  height: 60px;
+}
+
+
+.footer {
+  display: grid;
+  gap: 10px;
+}
+
+.foot-box {
+  background: lightgray;
+  height: 40px;
+}
+
+
+.content {
+  grid-template-columns: 1fr;
+}
+
+.footer {
+  grid-template-columns: 1fr;
+}
+
+
+@media (min-width: 768px) {
+
+  
+  .header {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  /
+  .header {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  
+  .content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  
+  .footer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  
+  <div class="header">
+    <div class="head-box"></div>
+    <div class="head-box"></div>
+  </div>
+
+  
+  <div class="hero"></div>
+
+  
+  <div class="content">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+
+
+  <div class="footer">
+    <div class="foot-box"></div>
+    <div class="foot-box"></div>
+    <div class="foot-box"></div>
+    <div class="foot-box"></div>
+  </div>
+
+</div>
+
+</body>
+</html>
