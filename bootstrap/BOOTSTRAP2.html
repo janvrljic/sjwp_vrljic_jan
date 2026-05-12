@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vrtlarenje Pro</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+            height: 90vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 50px;
+            color: #198754;
+        }
+
+        .carousel img {
+            height: 500px;
+            object-fit: cover;
+        }
+
+        footer {
+            background: #212529;
+            color: white;
+            padding: 30px 0;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">🌿 Vrtlarenje Pro</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Početna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#usluge">Usluge</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#galerija">Galerija</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontakt">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Profesionalno Uređenje Vrta</h1>
+
+        <p class="lead mt-3">
+            Obrezivanje živice, sadnja cvijeća, skupljanje lišća i održavanje vašeg dvorišta.
+        </p>
+
+        <a href="#usluge" class="btn btn-success btn-lg mt-3">
+            Pogledaj Usluge
+        </a>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-5" id="usluge">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2>Naše Usluge</h2>
+            <p class="text-muted">Sve za uredan i lijep vrt</p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card shadow border-0 h-100 text-center p-4">
+                    <i class="bi bi-tree feature-icon"></i>
+
+                    <h4 class="mt-3">Obrezivanje Živice</h4>
+
+                    <p>
+                        Precizno oblikovanje i održavanje živice za uredan izgled vašeg dvorišta.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow border-0 h-100 text-center p-4">
+                    <i class="bi bi-flower1 feature-icon"></i>
+
+                    <h4 class="mt-3">Sadnja Cvijeća</h4>
+
+                    <p>
+                        Sadnja sezonskog i ukrasnog cvijeća uz profesionalne savjete.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow border-0 h-100 text-center p-4">
+                    <i class="bi bi-wind feature-icon"></i>
+
+                    <h4 class="mt-3">Skupljanje Lišća</h4>
+
+                    <p>
+                        Brzo i učinkovito čišćenje dvorišta tijekom jesenskih mjeseci.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- JEDNA SLIKA -->
+<section id="galerija" class="py-5 bg-light">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2>Naši Radovi</h2>
+        </div>
+
+        <img 
+            src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600&auto=format&fit=crop"
+            class="img-fluid rounded shadow"
+            alt="Vrtlarenje">
+
+    </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="py-5" id="kontakt">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2>Kontaktirajte Nas</h2>
+            <p class="text-muted">
+                Profesionalno održavanje vrtova i dvorišta
+            </p>
+        </div>
+
+        <div class="row align-items-center g-5">
+
+            <!-- INFO -->
+            <div class="col-md-5">
+                <div class="card shadow border-0 p-4 h-100">
+
+                    <h4 class="mb-4">Kontakt Informacije</h4>
+
+                    <p class="fs-5">
+                        <i class="bi bi-telephone-fill text-success"></i>
+                        +385 99 123 4567
+                    </p>
+
+                    <p class="fs-5">
+                        <i class="bi bi-envelope-fill text-success"></i>
+                        info@vrtlarenjepro.hr
+                    </p>
+
+                    <p class="fs-5">
+                        <i class="bi bi-geo-alt-fill text-success"></i>
+                        Slavonski Brod, Hrvatska
+                    </p>
+
+                    <a href="#" class="btn btn-success mt-3">
+                        Nazovite Nas
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- SLIKA -->
+            <div class="col-md-7">
+                <img 
+                    src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1600&auto=format&fit=crop"
+                    class="img-fluid rounded shadow"
+                    alt="Vrt">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container text-center">
+
+        <h5>🌿 Vrtlarenje Pro</h5>
+
+        <p class="mb-1">
+            Profesionalno održavanje vrtova i dvorišta.
+        </p>
+
+        <div class="mt-3">
+            <a href="#" class="text-white me-3">
+                <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="#" class="text-white me-3">
+                <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="#" class="text-white">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+        </div>
+
+        <p class="mt-3 mb-0">
+            © 2026 Vrtlarenje Pro. Sva prava pridržana.
+        </p>
+
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
