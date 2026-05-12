@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+   
+    padding: 20px;
+}
+
+.container {
+  
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+}
+
+
+.proizvod {
+    background: white;
+    width: 50px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    
+
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: repeat(8, 1fr);
+    }
+}
+
+
+    </style>
+
+</head>
+<body>
+
+
+
+
+
+
+    
+
+  
+    <div class="proizvod">prvi proizvod</div>
+    <div class="proizvod">drugi proizvod</div>
+    <div class="proizvod">treci proizvod</div>
+    <div class="proizvod">cetvrti proizvod</div>
+    <div class="proizvod">peti proizvod</div>
+    <div class="proizvod">sesti proizvod</div>
+    <div class="proizvod">sedmi proizvod</div>
+    <div class="proizvod">osmi proizvod</div>
+    <div></div>
+</body>
+</html>
