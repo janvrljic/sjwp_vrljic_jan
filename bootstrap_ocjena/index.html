@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Osobna Web Stranica</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+            background-color: #343a40;
+        }
+
+        /* HERO */
+
+        .hero{
+            height: 60vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1974&auto=format&fit=crop')
+            center/cover no-repeat;
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1{
+            font-size: 3rem;
+        }
+
+        /* ABOUT */
+
+        .profile-img{
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* CARDS */
+
+        .card{
+            border-radius: 10px;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                Moj Portfolio
+            </a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navMenu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">O meni</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Hobiji</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tasks">Zadaće</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="kontakt.html">Kontakt</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <h1>Moja Osobna Web Stranica</h1>
+
+            <p class="mt-3">
+                Web stranica napravljena pomoću HTML-a, CSS-a i Bootstrapa.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="container py-5">
+
+        <div class="row align-items-center">
+
+            <!-- SLIKA -->
+
+            <div class="col-md-4 text-center mb-4">
+
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop"
+                     alt="Profilna slika"
+                     class="img-fluid profile-img">
+
+            </div>
+
+            <!-- TEKST -->
+
+            <div class="col-md-8">
+
+                <h2>O meni</h2>
+                <br>
+
+                <p>
+
+                    Ja sam Jan Vrljić,idem u Tehničku školu Slavonski Brod volim programiranje,
+                    video igre i gledanje serija.
+
+                </p>
+
+                <p>
+
+                    U slobodno vrijeme učim HTML, CSS i Bootstrap
+                    te radim male projekte za školu.
+
+                </p>
+
+                <p>
+
+                    Najviše volim igrati igrice i gledati akcijske
+                    i sci-fi serije.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section id="skills" class="bg-light py-5">
+
+        <div class="container">
+
+            <h2 class="text-center mb-4">
+                Hobiji i Vještine
+            </h2>
+
+            <div class="row g-4">
+
+                <!-- CARD 1 -->
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow">
+
+                        <div class="card-body text-center">
+
+                            <i class="bi bi-controller fs-1"></i>
+
+                            <h4 class="mt-3">
+                                Gaming
+                            </h4>
+
+                            <p>
+                                Volim najviše igrati multiplayer igrice tipa cs2, a singleplayer najdraža mi je detroit become human
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 2 -->
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow">
+
+                        <div class="card-body text-center">
+
+                            <i class="bi bi-code-slash fs-1"></i>
+
+                            <h4 class="mt-3">
+                                Programiranje
+                            </h4>
+
+                            <p>
+                                Poznajem osnove HTML-a i CSS-a. I pokušavam što više toga naučiti
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 3 -->
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow">
+
+                        <div class="card-body text-center">
+
+                            <i class="bi bi-film fs-1"></i>
+
+                            <h4 class="mt-3">
+                                Serije
+                            </h4>
+
+                            <p>
+                                Volim gledati akcijske filmove i serije. Omiljena serija mi je top boy, a film war machine.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TASKS -->
+
+    <section id="tasks" class="container py-5">
+
+        <h2 class="text-center mb-4">
+            Dosadašnje Zadaće
+        </h2>
+
+        <div class="list-group">
+
+            <a href="../zadace/zadaca1.html"
+               class="list-group-item list-group-item-action"
+               target="_blank">
+
+                Zadaća 1 - recept za burek
+
+            </a>
+
+            <a href="../zadace/zadaca2.html"
+               class="list-group-item list-group-item-action"
+               target="_blank">
+
+                Zadaća 2 - iskaznica
+
+            </a>
+
+            <a href="../zadace/zadaca3.html"
+               class="list-group-item list-group-item-action"
+               target="_blank">
+
+                Zadaća 3 - Galerija
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer id="contact">
+
+        <div class="container text-center">
+
+            <h4>Kontakt</h4>
+
+            <p>Email: mojemail@example.com</p>
+
+            <p class="mb-0">
+                © 2026 Moja Web Stranica
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+</section>
+
+</body>
+</html>
